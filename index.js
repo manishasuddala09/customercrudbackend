@@ -37,7 +37,11 @@ app.get('/api/health', (req, res) => {
     });
 });
 app.use(cors({ origin: 'http://localhost:3000' }));
+app.get('/', (req, res) => {
+  res.send('Customer Management API is running');
+});
 
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 // API Routes
 app.use('/api/customers', customerRoutes);
@@ -45,9 +49,6 @@ app.use('/api/addresses', addressRoutes);
 
 // 404 handler
 app.use(notFound);
-app.get('/', (req, res) => {
-  res.send('Customer Management API is running');
-});
 
 
 // Error handling
