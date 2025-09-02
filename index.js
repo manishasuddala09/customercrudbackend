@@ -45,6 +45,10 @@ app.use('/api/addresses', addressRoutes);
 
 // 404 handler
 app.use(notFound);
+app.get('/', (req, res) => {
+  res.send('Customer Management API is running');
+});
+
 
 // Error handling
 app.use(errorHandler);
