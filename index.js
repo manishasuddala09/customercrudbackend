@@ -36,7 +36,7 @@ app.get('/api/health', (req, res) => {
         database: 'Connected'
     });
 });
-app.use(cors({ origin: 'http://localhost:3000' }));
+app.use(cors({ origin: 'https://legendary-pie-6cd73f.netlify.app/' }));
 app.get('/', (req, res) => {
   res.send('Customer Management API is running');
 });
